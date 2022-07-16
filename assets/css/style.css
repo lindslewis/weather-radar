@@ -1,0 +1,23 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --background: #133337;
+    --text: #FFFFFF;
+}
+
+/* top header on page */
+#weatherHeader {
+    padding: 2vh;
+    margin-bottom: 5vh;
+    background-image: linear-gradient(black, var(--background));
+}
+
+/* title within the top header */
+#weatherText {
+    color: var(--text);
+    text-align: center;
+}
+
+
