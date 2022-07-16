@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap meta tag for responsiveness below -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <!-- bootstrap below -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <title>Weather Radar</title>
 </head>
@@ -20,54 +24,58 @@
     </header>
 
     <!-- primary contents of page -->
-    <main>
+    <main class="container">
+        <section class="row">
+
+            <!-- search container -->
+            <article class="searchCon col-4">
+
+                <!-- user search input form -->
+                <h1>Search for a city:</h1>
+                <form class="userSearch">
+                    <!-- <label for="userInput">Search for a City</label> -->
+
+                    <!-- also input type= search/type= text that says it's similar to type text -->
+                    <input type="search" id="userInput" placeholder="Portland">
+                    <button id="searchButton">search</button>
+                </form>
+
+                <!-- below will be the search history that they can view again-->
+                <section class="searchHistory"></section>
+            </article>
 
         <!-- container for the relevant city information for the current day and the five day forecast -->
-        <article id="cityWeather">
-            <!-- daily weather info -->
-            <section id="cityDaily">
-                <h1 class="cityName">Placeholder</h1>
+            <article id="cityWeather" class="col-8">
+                <!-- daily weather info -->
+                <section id="cityDaily">
+                    <h1 class="cityName">Placeholder</h1>
 
-                <p>Temperature:</p>
-                <p class="dailyTemp"></p>
-                <br>
-                <p>Wind:</p>
-                <p class="dailyWind"></p>
-                <br>
-                <p>Humidity:</p>
-                <p class="dailyHumid"></p>
-                <br>
-                <p>UV Index:</p>
-                <p class="dailyIndex"></p>
-            </section>
+                    <p>Temperature:</p>
+                    <p class="dailyTemp"></p>
+                    <br>
+                    <p>Wind:</p>
+                    <p class="dailyWind"></p>
+                    <br>
+                    <p>Humidity:</p>
+                    <p class="dailyHumid"></p>
+                    <br>
+                    <p>UV Index:</p>
+                    <p class="dailyIndex"></p>
+                </section>
 
-            <!-- five day weather forecast -->
-            <section class="fiveDay">
-                <h3>Five Day Weather Forecast</h3>
-                <section class="card1"></section>
-                <section class="card2"></section>
-                <section class="card3"></section>
-                <section class="card4"></section>
-                <section class="card5"></section>
-            </section>
+                <!-- five day weather forecast -->
+                <section class="fiveDay">
+                    <h3>Five Day Weather Forecast</h3>
+                    <section class="card1"></section>
+                    <section class="card2"></section>
+                    <section class="card3"></section>
+                    <section class="card4"></section>
+                    <section class="card5"></section>
+                </section>
 
-        </article>
+            </article>
 
-        <article class="searchCon">
-
-            <!-- user search input form -->
-            <h1>Search for a city:</h1>
-            <form class="userSearch">
-                <!-- <label for="userInput">Search for a City</label> -->
-
-                <!-- also input type= search/type= text that says it's similar to type text -->
-                <input type="search" id="userInput" placeholder="Portland">
-                <button id="searchButton">search</button>
-            </form>
-
-            <!-- below will be the search history that they can view again-->
-            <section class="searchHistory"></section>
-        </article>
+        </section>
     </main>
 
     
