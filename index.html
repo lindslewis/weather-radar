@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="style" src="assets/css/style.css">
+    <title>Weather Radar</title>
+</head>
+
+<body>
+
+    <!-- simple top of page element giving name -->
+    <header>
+        <h1>Weather Radar</h1>
+    </header>
+
+    <!-- primary contents of page -->
+    <main>
+
+        <!-- container for the relevant city information for the current day and the five day forecast -->
+        <article id="cityWeather">
+
+            <!-- daily weather info -->
+            <section id="cityDaily">
+                <h1 class="cityName"></h1>
+                <p class="dailyTemp"></p>
+                <p class="dailyWind"></p>
+                <p class="dailyHumid"></p>
+                <p class="dailyIndex"></p>
+            </section>
+
+            <!-- five day weather forecast -->
+            <section class="fiveDay">
+                <h3>Five Day Weather Forecast</h3>
+                <section class="card1"></section>
+                <section class="card2"></section>
+                <section class="card3"></section>
+                <section class="card4"></section>
+                <section class="card5"></section>
+            </section>
+
+        </article>
+
+        <article class="searchCon">
+
+            <!-- user search input form -->
+            <form class="userSearch">
+                <!-- <h1>Search for a city:</h1> -->
+                <label for="userInput">Search for a City</label>
+                <input type="text" id="userInput" placeholder="Portland">
+            </form>
+
+            <!-- below will be the search history that they can view again-->
+            <section class="searchHistory"></section>
+        </article>
+    </main>
+
+    
+</body>
+</html>
