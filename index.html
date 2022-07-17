@@ -24,48 +24,49 @@
     </header>
 
     <!-- primary contents of page -->
-    <main class="container">
-        <section class="row justify-content-around">
+    <main class="d-flex justify-content-around container">
+        <section class="row">
 
             <!-- search container -->
-            <article class="searchCon col-4">
+            <article class="searchCon">
+                <section id="upperCon">
+                    <!-- user search input form -->
+                    <h1 id="cityHeader">Search for a city</h1>
+                    <form class="userSearch input-group">
+                        <!-- <label for="userInput">Search for a City</label> -->
 
-                <!-- user search input form -->
-                <h1>Search for a city:</h1>
-                <form class="userSearch">
-                    <!-- <label for="userInput">Search for a City</label> -->
-
-                    <!-- also input type= search/type= text that says it's similar to type text -->
-                    <input type="search" id="userInput" placeholder="Portland">
-                    <button id="searchButton">search</button>
-                </form>
+                        <!-- also input type= search/type= text that says it's similar to type text -->
+                        <input type="search" id="userInput" placeholder="Portland">
+                        <button class="input-group-append" id="searchButton">search</button>
+                    </form>
+                </section>
 
                 <!-- below will be the search history that they can view again-->
                 <section class="searchHistory"></section>
             </article>
 
         <!-- container for the relevant city information for the current day and the five day forecast -->
-            <article id="cityWeather" class="col-8">
+            <article id="cityWeather">
                 <!-- daily weather info -->
                 <section id="cityDaily">
                     <h1 class="cityName">Placeholder</h1>
 
-                    <p>Temperature:</p>
+                    <p class="valueText">Temperature:</p>
                     <p class="dailyTemp"></p>
                     <br>
-                    <p>Wind:</p>
+                    <p class="valueText">Wind:</p>
                     <p class="dailyWind"></p>
                     <br>
-                    <p>Humidity:</p>
+                    <p class="valueText">Humidity:</p>
                     <p class="dailyHumid"></p>
                     <br>
-                    <p>UV Index:</p>
+                    <p class="valueText">UV Index:</p>
                     <p class="dailyIndex"></p>
                 </section>
 
                 <!-- five day weather forecast -->
                 <section class="fiveDay">
-                    <h3>Five Day Weather Forecast</h3>
+                    <h3 id="fiveDayHead">Five Day Weather Forecast</h3>
                     <section class="card1"></section>
                     <section class="card2"></section>
                     <section class="card3"></section>
