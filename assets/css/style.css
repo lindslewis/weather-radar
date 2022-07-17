@@ -13,11 +13,25 @@
     margin-bottom: 5vh;
     background-image: linear-gradient(black, var(--background));
 }
+.body {
+    background-image: url("../images/clouds.jpg")!important;
+}
 
+.container {
+    margin: 2vh 0 2vh 0;
+}
 /* title within the top header */
 #weatherText {
     color: var(--text);
     text-align: center;
 }
 
+.searchCon {
+    border: 1vh solid var(--background);
+    /* margin-right: 2vh; */
+}
 
+#cityWeather {
+    border: 1vh solid var(--background);
+    /* margin-left: 2vh; */
+}
