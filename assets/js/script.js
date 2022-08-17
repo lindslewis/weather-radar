@@ -18,6 +18,14 @@ async function getAPI(url) {
     show(data);
 }
 
+// for innerhtml stuff, to show on the page
+const show = (data) => {
+    // name of city, replaceChild() for this one perhaps?
+    const cityName = document.querySelector(".cityName");
+    document.body.appendChild(cityName);
+    // double check 27 below
+    const obj = parser(await requestUrl()); 
+}
 getAPI(requestUrl);
 
 
