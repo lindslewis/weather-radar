@@ -20,5 +20,7 @@ function getAPI() {
         });
 }
 
+getAPI();
+
 // searchButton.addEventListener('click', getAPI);
 
