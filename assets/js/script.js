@@ -25,6 +25,7 @@ const show = (data) => {
     document.body.appendChild(cityName);
     // double check 27 below
     const obj = parser(await requestUrl()); 
+    cityName.innerHTML = JSON.stringify(obj, null, 2);
 }
 getAPI(requestUrl);
 
