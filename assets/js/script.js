@@ -1,4 +1,4 @@
-const requestUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=45.51&lon=-122.67&appid=ec4f51ab549c402396d72795f8b68224";
+const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${45.51}&lon=${-122.67}&appid=ec4f51ab549c402396d72795f8b68224`;
 
 // below is my button for searching, need to call it here so I can attach the function to it 
 const searchButton = document.querySelector('#searchButton');
@@ -12,14 +12,18 @@ async function getAPI(url) {
     let data = await response.json();
     console.log(data);
     if (response) {
+        return console.log('weather api has been searched');
+
         // not sure if the below is necessary
-        hideLoader()
+        // hideLoader()
     }
     show(data);
 }
-
+for ( let i = 0; i < data.length; i++) {
+    console.log(data[i].name)
+}
 // for innerhtml stuff, to show on the page
-const show = (data) => {
+async function show() {
     // name of city, replaceChild() for this one perhaps?
     const cityName = document.querySelector(".cityName");
     document.body.appendChild(cityName);
