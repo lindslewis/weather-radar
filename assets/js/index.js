@@ -126,7 +126,7 @@ const displayWeather = function(weatherData) {
     let date = moment.unix(weatherData.current.dt).format("MMM Do YY")
     let dateEl = document.createElement("p");
     dateEl.innerText = date;
-    document.getElementById("cityDaily").prepend(dateEl)
+    document.getElementById("dailyDate").prepend(dateEl)
     let iconUrl = "http://openweathermap.org/img/wn/" + weatherData.current.weather[0].icon + ".png";
     let icon = document.createElement("img")
     icon.setAttribute("src", iconUrl)
