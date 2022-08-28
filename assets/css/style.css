@@ -107,6 +107,22 @@ body {
     font-weight: bold;
 }
 
+.dailyTemp {
+    float: right;
+}
+
+.dailyWind{
+    float: right;
+}
+
+.dailyHumid {
+    float: right;
+}
+
+.dailyIndex {
+    float: right;
+}
+
 /* container for the daily weather info for the selected city */
 #cityDaily {
     padding: 2vh;
