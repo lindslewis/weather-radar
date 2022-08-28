@@ -70,7 +70,7 @@
 
 // search history is populated from the local storage, can click and research
 const cityInputElem = document.querySelector("#userInput");
-
+const searchedCityElem = document.querySelector(".cityName");
 // we are going to want to edgecase for all lowercase, uppercase, etc
 const formSubmitHandler = function (e) {
     e.preventDefault();
@@ -90,5 +90,24 @@ const formSubmitHandler = function (e) {
 
 const getWeather = function (cityName) {
 
-    const apiUrl = ("https://api.openweathermap.org/data/2.5/weather?q=" + "&exclude=minutely&lang=en&appid" + this.apiKey);
+    // do not understand how to make an api call with my key without revealing the secret???
+    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + "&exclude=minutely&lang=en&appid" + this.apiKey;
+
+    fetch(apiUrl)
+        .then(function (res) {
+            console.log(res);
+            res.json().then(function (data) {
+                console.log(data);
+
+            })
+        })
+}
+
+const displayWeather = function(city, searchItem) {
+    if(city.length === 0) {
+        searchedCityElem.textContent = "invalid search";
+        return;
+    }
+
+    
 }
