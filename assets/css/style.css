@@ -107,7 +107,7 @@ body {
     font-weight: bold;
 }
 
-.dailyTemp {
+/* .dailyTemp {
     float: right;
 }
 
@@ -121,7 +121,7 @@ body {
 
 .dailyIndex {
     float: right;
-}
+} */
 
 /* container for the daily weather info for the selected city */
 #cityDaily {
@@ -131,9 +131,9 @@ body {
 }
 
 /* individual titles for weather properties */
-.valueText {
+/* .valueText {
     font-weight: bold;
-}
+} */
 
 /* container for the five day weather forecast */
 .fiveDay {

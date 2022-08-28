@@ -7,11 +7,10 @@
     <!-- bootstrap meta tag for responsiveness below -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-    <!-- bootstrap below -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <title>Weather Radar</title>
 </head>
@@ -46,22 +45,22 @@
             </article>
 
         <!-- container for the relevant city information for the current day and the five day forecast -->
-            <article id="cityWeather">
+            <article id="cityWeather" class="card">
                 <!-- daily weather info -->
-                <section id="cityDaily">
+                <section id="cityDaily" class="card-body">
                     <h1 class="cityName" placeholder="cityname"></h1>
 
                     <p class="valueText">Temperature:</p>
-                    <p class="dailyTemp"></p>
+                    <p class="dailyTemp fw-bold"></p>
                     <br>
                     <p class="valueText">Wind:</p>
-                    <p class="dailyWind"></p>
+                    <p class="dailyWind fw-bold"></p>
                     <br>
                     <p class="valueText">Humidity:</p>
-                    <p class="dailyHumid"></p>
+                    <p class="dailyHumid fw-bold"></p>
                     <br>
                     <p class="valueText">UV Index:</p>
-                    <p class="dailyIndex"></p>
+                    <p class="dailyIndex fw-bold"></p>
                 </section>
 
                 <!-- five day weather forecast -->
