@@ -79,8 +79,16 @@ const formSubmitHandler = function (e) {
     const cityName = cityInputElem.value.trim();
 
     if(cityName) {
+        getWeather(cityName);
         // call function here that searches the api???
+        // saves to local storage
+        // needs to print to page so some query selectors.
     } else {
         alert("invalid: please enter a city name")
     }
 };
+
+const getWeather = function (cityName) {
+
+    const apiUrl = ("https://api.openweathermap.org/data/2.5/weather?q=" + "&exclude=minutely&lang=en&appid" + this.apiKey);
+}
