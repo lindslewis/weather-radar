@@ -131,7 +131,7 @@ const displayWeather = function(weatherData) {
     let iconUrl = "http://openweathermap.org/img/wn/" + weatherData.current.weather[0].icon + ".png";
     let icon = document.createElement("img")
     icon.setAttribute("src", iconUrl)
-    document.getElementById("dailyDate").prepend(icon)
+    document.getElementById("dailyDate").append(icon)
     
     document.querySelector(".dailyTemp").innerText = weatherData.current.temp;
     document.querySelector(".dailyWind").innerText = weatherData.current.wind_speed;
