@@ -85,9 +85,7 @@ const formSubmitHandler = function (e) {
 
     if(cityName) {
         getWeather(cityName);
-        // call function here that searches the api???
-        // saves to local storage
-        // needs to print to page so some query selectors.
+
     } else {
         alert("invalid: please enter a city name")
     }
@@ -108,6 +106,7 @@ const getWeather = function (cityName) {
                 var lat = data[0].lat;
                 var lon = data[0].lon;
 
+
                 const secondApi = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=imperial";
 
                 fetch(secondApi)
@@ -123,30 +122,42 @@ const getWeather = function (cityName) {
 }
 
 const displayWeather = function(weatherData) {
-    let date = moment.unix(weatherData.current.dt).format("MMM Do YY")
+
+    let date = moment.unix(weatherData.current.dt).format("LL")
     let dateEl = document.createElement("p");
     dateEl.innerText = date;
     document.getElementById("dailyDate").prepend(dateEl)
+
     let iconUrl = "http://openweathermap.org/img/wn/" + weatherData.current.weather[0].icon + ".png";
     let icon = document.createElement("img")
     icon.setAttribute("src", iconUrl)
-    document.getElementById("cityDaily").prepend(icon)
+    document.getElementById("dailyDate").prepend(icon)
+    
     document.querySelector(".dailyTemp").innerText = weatherData.current.temp;
     document.querySelector(".dailyWind").innerText = weatherData.current.wind_speed;
     document.querySelector(".dailyHumid").innerText = weatherData.current.humidity;
     document.querySelector(".dailyIndex").innerText = weatherData.current.uvi;
     for( i = 1; i < 6; i++) {
         let card = document.querySelector(".card" + (i))
+
+        // let fiveDate = moment.unix(weatherData.daily[i].dt).format("LL")
+        // let fiveEl = document.createElement("p");
+        // fiveEl.innerText = fiveDate;
+        // card.appendChild(fiveDate);
+
         let iconUrl = "http://openweathermap.org/img/wn/" + weatherData.daily[i].weather[0].icon + ".png";
         let icon = document.createElement("img")
         icon.setAttribute("src", iconUrl)
         card.appendChild(icon)
+
         let temp = document.createElement("p")
         temp.innerText = weatherData.daily[i].temp.day;
         card.appendChild(temp);
+
         let wind = document.createElement("p")
         wind.innerText = weatherData.daily[i].wind_speed;
         card.appendChild(wind);
+
         let humid = document.createElement("p")
         humid.innerText = weatherData.daily[i].humidity;
         card.appendChild(humid);
