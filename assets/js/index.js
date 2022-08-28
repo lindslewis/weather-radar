@@ -74,7 +74,7 @@
 const searchButton = document.querySelector("#searchButton");
 const cityInputElem = document.querySelector("#userInput");
 // const searchedCityElem = document.querySelector(".cityName");
-
+const searchHistory = [];
 
 // we are going to want to edgecase for all lowercase, uppercase, etc
 const formSubmitHandler = function (e) {
@@ -84,6 +84,7 @@ const formSubmitHandler = function (e) {
     const cityName = cityInputElem.value.trim();
 
     if(cityName) {
+        
         getWeather(cityName);
 
     } else {
