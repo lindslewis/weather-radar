@@ -1,4 +1,5 @@
 const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${45.51}&lon=${-122.67}&appid=ec4f51ab549c402396d72795f8b68224`;
+// above needs to take the user input in the curlies... 
 
 // below is my button for searching, need to call it here so I can attach the function to it 
 const searchButton = document.querySelector('#searchButton');
@@ -49,4 +50,23 @@ getAPI(requestUrl);
 // getAPI();
 
 // searchButton.addEventListener('click', getAPI);
+
+//  index will cover the main page functions
+
+// input bar for users to search for a city
+// the city searched for needs to be fetched from the api
+// api then needs to provide and populate the necessary information for the user in the right field of the screen
+// info needed: city name, current weather conditions, future weather conditions
+// upon search and enter, city search is stored locally 
+
+
+// viewing weather conditions, presents:
+// city name, date, icon for weather conditions, temp, humidity, wind speed, uv index
+// need to assign a color for conditions: favorable, moderate, severe (green, orange, red obvs)
+
+
+// future conditions  gives 5 day forecast
+// each bit of the 5day forecast gives date, icon for weather conditions, temp, windspeed, humidity
+
+// search history is populated from the local storage, can click and research
 
