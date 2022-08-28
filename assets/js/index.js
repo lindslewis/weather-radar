@@ -1,4 +1,4 @@
-const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${45.51}&lon=${-122.67}&appid=ec4f51ab549c402396d72795f8b68224`;
+
 // above needs to take the user input in the curlies... 
 
 // below is my button for searching, need to call it here so I can attach the function to it 
@@ -70,3 +70,6 @@ getAPI(requestUrl);
 
 // search history is populated from the local storage, can click and research
 
+const formSubmitHandler = function (e) {
+
+}
