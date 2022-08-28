@@ -5,6 +5,18 @@
 :root {
     --background: #133337;
     --text: #FFFFFF;
+    --secondary: #6A8D92;
+    --highlight: #A97C73;
+    --accent: #D64933;
+}
+
+
+body {
+    background-image: url("../images/clouds.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
 }
 
 /* top header on page */
@@ -20,4 +32,99 @@
     text-align: center;
 }
 
+/* container for the search box and weather props */
+.container {
+    margin: 2vh 0 2vh 0;
+}
+/* search container below */
+.searchCon {
+    padding: 2vh;
+    border-radius: 5vh;
+    background-color: var(--text);
+    box-shadow: 3vh 3vh 2vh var(--background)!important;
+    margin-right: 2vh;
+}
+/* header for the city search */
+#cityHeader {
+    font-weight: bold;
+}
 
+/* #userInput::before {
+    color: black;
+    font-weight: bold;
+} */
+
+/* font is too light in the input but can't figure out how to fix */
+#userInput {
+    border-color: var(--secondary);
+    border-width: 2px 0px 2px 2px;
+    border-radius: 1vh 0 0 1vh;
+    padding: 5px;
+    box-shadow: none;
+}
+
+/* #userInput:focus {
+    color: black;
+} */
+
+/* just the button as it sits on the page */
+#searchButton {
+    color: black;
+    font-weight: bold;
+    border-color: var(--secondary);
+    box-shadow: none;
+    background: var(--text);
+    padding: 5px;
+    border-width: 2px;
+    border-radius: 0 1vh 1vh 0;
+    transition-duration: 0.4s;
+}
+/* to make it turn the highlight color and white text when you hover */
+#searchButton:hover {
+    font-weight: bold;
+    color: var(--text);
+    background-color: var(--highlight);
+}
+/* the container for the input, search button, and header for the larger part of the card */
+#upperCon {
+    border-bottom: 2px solid var(--highlight);
+    padding: 2vh;
+}
+.userSearch {
+    justify-content: center;
+}
+
+/* weather container below */
+#cityWeather {
+    margin-left: 2vh;
+    padding: 2vh;
+    border-radius: 5vh;
+    background-color:var(--text);
+    box-shadow: 3vh 3vh 2vh var(--background)!important;
+}
+
+.cityName {
+    font-weight: bold;
+}
+
+/* container for the daily weather info for the selected city */
+#cityDaily {
+    padding: 2vh;
+    border-bottom: 2px solid var(--highlight);
+    padding: 2vh;
+}
+
+/* individual titles for weather properties */
+.valueText {
+    font-weight: bold;
+}
+
+/* container for the five day weather forecast */
+.fiveDay {
+    padding: 2vh;
+}
+
+/* header for five day */
+#fiveDayHead {
+    font-weight: bold;
+}
