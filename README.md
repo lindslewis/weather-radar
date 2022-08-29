@@ -13,7 +13,8 @@ Check out the deployed site [here](https://lindslewis.github.io/weather-radar/).
 3. [lessons-learned](#lessons-learned)
 4. [credits](#credits)
 
-![screenshot of page](challenges\weather-radar\assets\images\readme-img.jpg)
+![screenshot of page]()
+![readme-img](https://user-images.githubusercontent.com/104105172/187122500-0382ab73-e814-4cb8-b0ea-5b36d0e5ee11.jpg)
 
 ## usage
 
