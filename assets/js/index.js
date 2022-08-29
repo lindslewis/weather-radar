@@ -117,7 +117,11 @@ const formSubmitHandler = function (e) {
     const cityName = cityInputElem.value.trim();
 
     if(cityName) {
-        
+        searchHistory.push(cityName);
+        cityInputElem.value = "";
+
+        storeSearch();
+        renderHistory();
         getWeather(cityName);
 
     } else {
@@ -196,4 +200,6 @@ const displayWeather = function(weatherData) {
         humid.innerText = weatherData.daily[i].humidity;
         card.appendChild(humid);
     }
-}
+};
+
+init()
