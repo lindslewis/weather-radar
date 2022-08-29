@@ -76,6 +76,19 @@ const cityInputElem = document.querySelector("#userInput");
 // const searchedCityElem = document.querySelector(".cityName");
 const searchHistory = [];
 
+const renderHistory = function() {
+    let searchList = document.querySelector(".historyList");
+    searchList.innerHTML = "";
+    for ( i = 0; i < 6; i++) {
+        const item = searchHistory[i];
+
+        const searchItem = document.createElement("li");
+        searchItem.textContent = item;
+        // set attribute, button?? click? 
+        searchItem.setAttribute("")
+    }
+}
+
 // for run on page load
 const init = function() {
     let storedSearch = JSON.parse(localStorage.getItem("searchHistory"));
@@ -83,14 +96,14 @@ const init = function() {
     if (storedSearch !== null) {
         searchHistory = storedSearch;
     }
-    // need to render them now
+    renderHistory();
 }
 
 // setting local storage
 const storeSearch = function() {
     localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
 }
-// we are going to want to edgecase for all lowercase, uppercase, etc
+
 const formSubmitHandler = function (e) {
     e.preventDefault();
 
