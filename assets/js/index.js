@@ -85,7 +85,13 @@ const renderHistory = function() {
         const searchItem = document.createElement("li");
         searchItem.textContent = item;
         // set attribute, button?? click? 
-        searchItem.setAttribute("")
+        // other options that seem viable: oninput, onselect, onsubmit
+        searchItem.setAttribute("formaction", i);
+
+        // this feels not right at all
+        item.appendChild(searchButton);
+        searchList.appendChild(item);
+
     }
 }
 
