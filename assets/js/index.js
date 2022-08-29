@@ -76,6 +76,15 @@ const cityInputElem = document.querySelector("#userInput");
 // const searchedCityElem = document.querySelector(".cityName");
 const searchHistory = [];
 
+// for run on page load
+const init = function() {
+    let storedSearch = JSON.parse(localStorage.getItem)
+}
+
+// setting local storage
+const storeSearch = function() {
+    localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+}
 // we are going to want to edgecase for all lowercase, uppercase, etc
 const formSubmitHandler = function (e) {
     e.preventDefault();
