@@ -78,7 +78,12 @@ const searchHistory = [];
 
 // for run on page load
 const init = function() {
-    let storedSearch = JSON.parse(localStorage.getItem)
+    let storedSearch = JSON.parse(localStorage.getItem("searchHistory"));
+
+    if (storedSearch !== null) {
+        searchHistory = storedSearch;
+    }
+    // need to render them now
 }
 
 // setting local storage
