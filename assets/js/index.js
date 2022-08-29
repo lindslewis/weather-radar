@@ -134,7 +134,7 @@ const getWeather = function (cityName) {
 
     const apiKey = "ec4f51ab549c402396d72795f8b68224"
     // do not understand how to make an api call with my key without revealing the secret???
-    const apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=" + apiKey;
+    const apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=" + apiKey;
 
     fetch(apiUrl)
         .then(function (res) {
@@ -166,7 +166,7 @@ const displayWeather = function(weatherData) {
     dateEl.innerText = date;
     document.getElementById("dailyDate").prepend(dateEl)
 
-    let iconUrl = "http://openweathermap.org/img/wn/" + weatherData.current.weather[0].icon + ".png";
+    let iconUrl = "https://openweathermap.org/img/wn/" + weatherData.current.weather[0].icon + ".png";
     let icon = document.createElement("img")
     icon.setAttribute("src", iconUrl)
     document.getElementById("dailyDate").append(icon)
@@ -183,7 +183,7 @@ const displayWeather = function(weatherData) {
         // fiveEl.innerText = fiveDate;
         // card.appendChild(fiveDate);
 
-        let iconUrl = "http://openweathermap.org/img/wn/" + weatherData.daily[i].weather[0].icon + ".png";
+        let iconUrl = "https://openweathermap.org/img/wn/" + weatherData.daily[i].weather[0].icon + ".png";
         let icon = document.createElement("img")
         icon.setAttribute("src", iconUrl)
         card.appendChild(icon)
